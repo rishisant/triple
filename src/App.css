@@ -162,3 +162,26 @@ body {
     text-align: center;
     font-weight: bold;
 }
+
+.about-content {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 2rem;
+    margin-top: 1rem;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+.about-header {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.about-text {
+    font-size: 1rem;
+    text-align: left;
+}

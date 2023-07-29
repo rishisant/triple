@@ -37,6 +37,7 @@ const Create = () => {
 
             <div className="main-content create">
                 <div className="create-post-wrapper">
+
                     <div className="triple_holder">
                         <div className="triple t">word1</div>
                         <div className="triple t">word2</div>
@@ -53,14 +54,16 @@ const Create = () => {
                             <p className="post-title">Post Title</p>
                             <p className="post-content">Post Content</p>
                         </div>
-                        {/* More posts go here */}
                     </div>
+
                 </div>
+
                 <div className="sidebar">
                     <button className="sb button">Regenerate Triple</button>
                     <button className="sb button" onClick={fillPreview}>Preview</button>
                     <button className="sb button">Post</button>
                 </div>
+                
             </div>
 
         </>

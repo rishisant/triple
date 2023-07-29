@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 
 import Home from "./Home";
 import Create from "./Create";
+import About from "./About";
 
 import { BrowserRouter as Router, Route, Routes, Switch, BrowserRouter } from "react-router-dom";
 
@@ -11,7 +12,8 @@ function App () {
     <BrowserRouter>
       <Routes>
         <Route index element={<Home />} />
-        <Route path="/create" element={<Create />} />
+        <Route path="/Create" element={<Create />} />
+        <Route path="/About" element={<About />} />
       </Routes>
     </BrowserRouter>
   )
