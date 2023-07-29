@@ -1,9 +1,34 @@
 import React from "react";
 import ReactDOM from "react-dom";
-
 import { useNavigate } from "react-router-dom";
 
 import "./App.css";
+
+import mongoose, { Schema } from 'mongoose';
+
+const PostSchema = new Schema({
+    title: {
+        type: String,
+        required: true
+    },
+    content: {
+        type: String,
+        required: true
+    },
+    likes: {
+        type: Number,
+        required: true
+    },
+    uuid: {
+        type: String,
+        required: true,
+        unique: true
+    },
+    createdAt: {
+        type: Date,
+        required: true
+    },
+    });
 
 const Home = () => {
 
