@@ -1,11 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import "./App.css";
 
 const Home = () => {
+
+    const navigate = useNavigate();
+
     return (
         <>
             <div className="h top-header">
@@ -20,11 +23,11 @@ const Home = () => {
                 </div>
 
                 <div className="h top-header-content">
-                    <span id="unselected"><Link to="/Create">Create</Link></span>
+                    <span id="unselected" onClick={() => navigate("./Create")}>Create</span>
                 </div>
 
                 <div className="h top-header-content">
-                    <span id="unselected">About</span>
+                    <span id="unselected" onClick={() => navigate("./About")}>About</span>
                 </div>
             </div>
 
