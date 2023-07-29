@@ -1,38 +1,30 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ReactDOM from "react-dom";
 import { useNavigate } from "react-router-dom";
 
 import "./App.css";
 
 import mongoose, { Schema } from 'mongoose';
+import { faHeart } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const PostSchema = new Schema({
-    title: {
-        type: String,
-        required: true
-    },
-    content: {
-        type: String,
-        required: true
-    },
-    likes: {
-        type: Number,
-        required: true
-    },
-    uuid: {
-        type: String,
-        required: true,
-        unique: true
-    },
-    createdAt: {
-        type: Date,
-        required: true
-    },
-    });
+import { PostSchema } from "./PostSchema";
+
+import axios from 'axios';
+
 
 const Home = () => {
 
     const navigate = useNavigate();
+    const [posts, setPosts] = useState([]);
+
+    useEffect(() => {
+        axios.get("http://localhost:3001/posts")
+            .then(res => { 
+                setPosts(res.data); 
+            })
+            .catch(err => console.log(err));
+    }, []);
 
     return (
         <>
@@ -59,8 +51,11 @@ const Home = () => {
             <div className="main-content">
                 <div className="post-list">
                     <div className="post">
+                        <p className="post-likes">0 Likes</p>
+                        <p className="post-date">date</p>
                         <p className="post-title">Post Title</p>
                         <p className="post-content">Post Content</p>
+                        <FontAwesomeIcon icon={faHeart} className="post-like-icon" />
                     </div>
                     <div className="post">
                         <p className="post-title">Post Title</p>

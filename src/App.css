@@ -68,7 +68,7 @@ body {
 .post {
   width: 90%;
   border: 1px solid #232323;
-  padding: 15px;
+  padding: 1rem;
   margin-bottom: 20px;
   background-color: #ffffff;
 }
@@ -77,6 +77,41 @@ body {
   font-size: 1.7rem;
   font-weight: bold;
   margin-bottom: 10px;
+}
+
+.post-date {
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #808080;
+  float: right;
+}
+
+
+.post-likes {
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #808080;
+  float: right;
+  margin-left: 1rem;
+}
+
+.post-like-icon {
+  font-size: .5rem;
+  color: #1f1f1f;
+  float: right;
+  margin-top: 1em;
+  cursor: pointer;
+  padding: .5rem;
+  border: 1px solid #808080;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 20px;
+}
+
+.post-like-icon:hover {
+  background-color: #232323;
+  color: #ffffff;
+  transition: 0.5s ease;
 }
 
 .post-content {
@@ -173,6 +208,7 @@ body {
     margin-top: 1rem;
     margin-left: 1.5rem;
     margin-right: 1.5rem;
+    border-radius: 2rem;
 }
 
 .about-header {
